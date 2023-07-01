@@ -8,7 +8,7 @@ import { BsFillMoonFill } from "react-icons/bs"
 const Navbar = () => {
 
   const {state,dispatch} = useContextGlobal()
-
+ 
   const cambiarTema = () =>{
 
     if(state.theme == 'light'){
@@ -18,12 +18,12 @@ const Navbar = () => {
       dispatch({type:'dark', payload: 'light'})
     }
   }
-
+  
   return (
     <nav className="navbar">
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <div className="navbar-left">
-        <img src="public/images/DH.png" alt="" style={{width: '300px'}}/>
+        <img src="../../images/DH.png" alt="logo" style={{width: '300px'}}/>
       </div>
       <div className="navbar-right">
       <Link to={routes.home}><h4>Home</h4></Link>
