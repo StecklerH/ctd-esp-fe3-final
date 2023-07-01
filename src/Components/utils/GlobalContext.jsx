@@ -1,7 +1,7 @@
 import { createContext, useContext,useEffect,useReducer,useState } from "react";
 import axios from 'axios'
 
-const ContextGlobal = createContext();
+const ContextGlobal = createContext()
 
 const initialStateData = {
   data : [] , 
@@ -35,6 +35,7 @@ const reducer = (state,action) => {
 const GlobalContext = ({children}) => {
   
   const [state,dispatch] = useReducer(reducer,initialStateData)
+  
   const [usuario,setUsuario] =  useState({
     nombre: '',
     email: ''
